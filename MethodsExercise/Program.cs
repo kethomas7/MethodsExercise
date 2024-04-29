@@ -4,17 +4,27 @@
     {
         static void Main(string[] args)
         {
+
+            //Excerise 1 
             GetInfo();
 
+
+           //Exercise 2
             int addResult = Add(7, 7);
             int multiplyResult = Multiply(4, 6);
             int divideResult = Divide(20, 4);
-            int subtractResult = Subtract(15,5);
+            int subtractResult = Subtract(15, 5);
 
 
             Console.WriteLine($"Here are your math results:{addResult}, {multiplyResult}, {divideResult}, {subtractResult} ");
-            
+
+
+            //Challenge Mode
+            int additionResult = Addition(5, 8, 9, 8, 3, 2, 2, 2);
+            Console.WriteLine(additionResult);
         }
+
+
         //Exercise 1
         public static void GetInfo () 
         {
@@ -56,5 +66,21 @@
         }
 
         
+
+        //Challenge Mode
+         public static int Addition (params int[] numbersArray)
+        {
+
+            int sum = 0;
+
+            foreach(int number in numbersArray)
+            {
+                sum += number;
+
+            }
+
+            return sum;
+
+        }
     }
 }
